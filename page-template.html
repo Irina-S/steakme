@@ -11,7 +11,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/slick.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="./css/style.css?v=1.0.1">
+  <link rel="stylesheet" href="css/responsive.css?v=1.0.1">
   <style>
     .slick-slider:not(.slick-initialized) .item:not(:first-of-type){
       display:none;
@@ -21,6 +23,9 @@
 </head>
 <body>
 <aside class="aside">
+  <div class="btn_close">
+    <img src="img/icons/close-beige.svg" alt="" class="">
+  </div>
   <div class="logo">
     <a href="/">
       <img src="./img/logo.png" alt="Логотип">
@@ -127,6 +132,11 @@
 <div class="wrapper">
 
   <header class="header">
+    <div class="logo">
+      <a href="/">
+        <img src="./img/logo.png" alt="Логотип">
+      </a>
+    </div>
     <nav class="main-navigation">
       <ul class="main-navigation__list">
         <li class="main-navigation__item"><a href="#" class="main-navigation__link">Главная</a></li>
@@ -150,7 +160,7 @@
     <a href="#" class="header__cart header-cart">
       <img src="img/icons/font-icon/cart.svg" alt="cart-icon">
       <span class="header-cart__text">
-        Корзина:
+        <span>Корзина: </span>
         <span class="header-cart__price">1750 руб.</span>
       </span>
     </a>
@@ -267,7 +277,7 @@
                 <div class="item__text text">Микс мяса говядины, свинины и баранины, все это в сочетании с баклажаном, красным и зеленым перцем, кабачком и луком.</div>
                 <div class="item__buy">
                   <form action="" class="item-form">
-                    <button class="item-form__btn">
+                    <button class="btn btn_filled item-form__btn">
                       <img src="img/icons/font-icon/cart.svg" alt="корзина">
                       <span class="item__price">179 руб.</span>
                     </button>
@@ -296,7 +306,7 @@
             <div class="item__name">Медальон из свинины</div>
             <div class="item__buy">
               <form action="" class="item-form">
-                <button class="item-form__btn">
+                <button class="btn btn_transparent item-form__btn">
                   <img src="img/icons/font-icon/cart.svg" alt="корзина">
                   <span class="item__price">179 руб.</span>
                 </button>
@@ -314,7 +324,7 @@
             <div class="item__name">Стейк из говяжьей вырезки</div>
             <div class="item__buy">
               <form action="" class="item-form">
-                <button class="item-form__btn">
+                <button class="btn btn_transparent item-form__btn">
                   <img src="img/icons/font-icon/cart.svg" alt="корзина">
                   <span class="item__price">179 руб.</span>
                 </button>
@@ -338,7 +348,7 @@
             <div class="item__name">Мраморный ростбиф</div>
             <div class="item__buy">
               <form action="" class="item-form">
-                <button class="item-form__btn">
+                <button class="btn btn_transparent item-form__btn">
                   <img src="img/icons/font-icon/cart.svg" alt="корзина">
                   <span class="item__price">179 руб.</span>
                 </button>
@@ -355,7 +365,7 @@
             <div class="item__name">Медальон из свинины</div>
             <div class="item__buy">
               <form action="" class="item-form">
-                <button class="item-form__btn">
+                <button class="btn btn_transparent item-form__btn">
                   <img src="img/icons/font-icon/cart.svg" alt="корзина">
                   <span class="item__price">179 руб.</span>
                 </button>
@@ -372,7 +382,7 @@
             <div class="item__name">Мраморный ростбиф</div>
             <div class="item__buy">
               <form action="" class="item-form">
-                <button class="item-form__btn">
+                <button class="btn btn_transparent item-form__btn">
                   <img src="img/icons/font-icon/cart.svg" alt="корзина">
                   <span class="item__price">179 руб.</span>
                 </button>
@@ -389,7 +399,7 @@
             <div class="item__name">Салат легкий</div>
             <div class="item__buy">
               <form action="" class="item-form">
-                <button class="item-form__btn">
+                <button class="btn btn_transparent item-form__btn">
                   <img src="img/icons/font-icon/cart.svg" alt="корзина">
                   <span class="item__price">179 руб.</span>
                 </button>
@@ -407,7 +417,7 @@
             <div class="item__name">Стейк из говяжьей вырезки</div>
             <div class="item__buy">
               <form action="" class="item-form">
-                <button class="item-form__btn">
+                <button class="btn btn_transparent item-form__btn">
                   <img src="img/icons/font-icon/cart.svg" alt="корзина">
                   <span class="item__price">179 руб.</span>
                 </button>
@@ -431,7 +441,7 @@
             <div class="item__name">Салат легкий</div>
             <div class="item__buy">
               <form action="" class="item-form">
-                <button class="item-form__btn">
+                <button class="btn btn_transparent item-form__btn">
                   <img src="img/icons/font-icon/cart.svg" alt="корзина">
                   <span class="item__price">179 руб.</span>
                 </button>
@@ -448,7 +458,7 @@
             <div class="item__name">Медальон из свинины</div>
             <div class="item__buy">
               <form action="" class="item-form">
-                <button class="item-form__btn">
+                <button class="btn btn_transparent item-form__btn">
                   <img src="img/icons/font-icon/cart.svg" alt="корзина">
                   <span class="item__price">179 руб.</span>
                 </button>
@@ -466,7 +476,7 @@
             <div class="item__name">Стейк из говяжьей вырезки</div>
             <div class="item__buy">
               <form action="" class="item-form">
-                <button class="item-form__btn">
+                <button class="btn btn_transparent item-form__btn">
                   <img src="img/icons/font-icon/cart.svg" alt="корзина">
                   <span class="item__price">179 руб.</span>
                 </button>
@@ -490,7 +500,7 @@
             <div class="item__name">Мраморный ростбиф</div>
             <div class="item__buy">
               <form action="" class="item-form">
-                <button class="item-form__btn">
+                <button class="btn btn_transparent item-form__btn">
                   <img src="img/icons/font-icon/cart.svg" alt="корзина">
                   <span class="item__price">179 руб.</span>
                 </button>
@@ -498,8 +508,10 @@
             </div>
           </div>
         </div>
-
-        <a href="" class="link link_learn-more">Смотреть еще</a>
+        <div class="link_learn-more">
+          <a href="" class="link">Смотреть еще</a>
+        </div>
+        
 
       </div>
     </section>
@@ -516,7 +528,7 @@
           <p>РОДИЗИО - наиболее популярная традиция обслуживания бразильской кухни, также известная как «ешь, сколько хочешь» и эту уникальную концепцию мы предлагаем в Grill do Brasil.</p>
           <p>Все началось в регионе Пампас, на юге Бразилии, и распространилось по всей стране. «Гаучо-способ» приготовления мяса в сочетании с особым видом обслуживания завоевал уже Европу и Америку.</p>
         </div>
-        <a href="#" class="btn">Читать продолжение</a>
+        <a href="#" class="btn btn_filled">Читать продолжение</a>
       </div>
       <div class="aboutus__photo">
         <img src="img/aboutus-photo.png" alt="фото">
@@ -528,7 +540,9 @@
       <div class="items-container">
 
         <div class="insta-item">
-          <img src="img/insta-items/1.png" alt="фото" class="insta-item__photo">
+          <div class="insta-item__photo">
+            <img src="img/insta-items/1.png" alt="фото">
+          </div>
           <div class="insta-item__title">
             <a href="#" class="insta-item__link">@breehopp</a>
             <div class="insta-item__likes">
@@ -543,7 +557,9 @@
         </div>
 
         <div class="insta-item">
-          <img src="img/insta-items/2.png" alt="фото" class="insta-item__photo">
+          <div class="insta-item__photo">
+            <img src="img/insta-items/2.png" alt="фото">
+          </div>
           <div class="insta-item__title">
             <a href="#" class="insta-item__link">@breehopp</a>
             <div class="insta-item__likes">
@@ -558,7 +574,9 @@
         </div>
 
         <div class="insta-item">
-          <img src="img/insta-items/3.png" alt="фото" class="insta-item__photo">
+          <div class="insta-item__photo">
+            <img src="img/insta-items/3.png" alt="фото">
+          </div>
           <div class="insta-item__title">
             <a href="#" class="insta-item__link">@breehopp</a>
             <div class="insta-item__likes">
@@ -573,7 +591,9 @@
         </div>
 
         <div class="insta-item">
-          <img src="img/insta-items/4.png" alt="фото" class="insta-item__photo">
+          <div class="insta-item__photo">
+            <img src="img/insta-items/4.png" alt="фото">
+          </div>
           <div class="insta-item__title">
             <a href="#" class="insta-item__link">@breehopp</a>
             <div class="insta-item__likes">
