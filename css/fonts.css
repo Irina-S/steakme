@@ -1,49 +1,80 @@
 @font-face {
-    font-family: "icon-font";
-    src: url('../fonts/icon-font/icon-font.svg');
-    src: url('../fonts/icon-font/icon-font.eot?38086597#iefix') format('embedded-opentype'),
-    url('../fonts/icon-font/icon-font.woff2?38086597') format('woff2'),
-    url('../fonts/icon-font/icon-font.woff?38086597') format('woff'),
-    url('../fonts/icon-font/icon-font.ttf?38086597') format('truetype'),
-    url('../fonts/icon-font/icon-font.svg?38086597#fontello') format('svg');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'fontello';
+  src: url('../fonts/fontello.eot?50009890');
+  src: url('../fonts/fontello.eot?50009890#iefix') format('embedded-opentype'),
+       url('../fonts/fontello.woff2?50009890') format('woff2'),
+       url('../fonts/fontello.woff?50009890') format('woff'),
+       url('../fonts/fontello.ttf?50009890') format('truetype'),
+       url('../fonts/fontello.svg?50009890#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?50009890#fontello') format('svg');
   }
-  
-  [class^="icon-font"]:before, [class*=" icon-font"]:before {
-    font-family: "icon-font", sans-serif;
-    font-style: normal;
-    font-weight: inherit;
-    display: inline-block;
-    text-decoration: inherit;
-    width: 1em;
-    margin-right: .2em;
-    text-align: center;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1em;
-    margin-left: .2em;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  .icon-instagram:before { content: '\E80C'; }
-  .icon-location:before { content: '\E802'; }
-  .icon-tripadvisor:before { content: '\E806'; }
-  .icon-hot-sale:before { content: '\E80A'; }
-  .icon-phone:before { content: '\E801'; }
-  .icon-all:before { content: '\E803';}
-  .icon-add-to-cart:before { content: '\E807'; }
-  .icon-quote:before { content: '\E80B'; }
-  .icon-yandex:before { content: '\F305'; }
-  .icon-google:before { content: '\F1A0'; }
-  .icon-search:before { content: '\E804'; }
-  .icon-cart:before { content: '\E805'; }
-  .icon-car:before { content: '\E809'; }
-  .icon-clock:before { content: '\E808'; }
-  .icon-menu:before { content: '\F0C9'; }
-  .icon-catalog:before { content: '\E813'; }
-  .icon-close:before { content: '\E80D'; }
-  .icon-arrow:before { content: '\f178'; }
-  .icon-plus:before { content: '\E80E'; }
-  .icon-back-arrow:before { content: '\F177'; }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-location:before { content: '\e802'; } /* '' */
+.icon-all:before { content: '\e803'; } /* '' */
+.icon-cancel:before { content: '\e80d'; } /* '' */
+.icon-th-large:before { content: '\e813'; } /* '' */
+.icon-phone:before { content: '\e815'; } /* '' */
+.icon-youtube:before { content: '\e816'; } /* '' */
+.icon-cart:before { content: '\e817'; } /* '' */
+.icon-check:before { content: '\e818'; } /* '' */
+.icon-clock:before { content: '\e819'; } /* '' */
+.icon-delivery:before { content: '\e81a'; } /* '' */
+.icon-fb:before { content: '\e81b'; } /* '' */
+.icon-home-icon:before { content: '\e81c'; } /* '' */
+.icon-insta:before { content: '\e81d'; } /* '' */
+.icon-like:before { content: '\e81e'; } /* '' */
+.icon-location-1:before { content: '\e81f'; } /* '' */
+.icon-ok:before { content: '\e820'; } /* '' */
+.icon-phone-1:before { content: '\e821'; } /* '' */
+.icon-promo:before { content: '\e822'; } /* '' */
+.icon-quotes:before { content: '\e823'; } /* '' */
+.icon-search:before { content: '\e824'; } /* '' */
+.icon-trash:before { content: '\e825'; } /* '' */
+.icon-vk:before { content: '\e826'; } /* '' */
+.icon-menu:before { content: '\f0c9'; } /* '' */
