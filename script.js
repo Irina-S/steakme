@@ -16,8 +16,8 @@ $(document).ready(function () {
 
     try{
         $(".cart").niceScroll({
-          cursorcolor:"silver",
-          cursorwidth:"8px"
+          cursorcolor:"#4D4238",
+          cursorwidth:"10px"
         });
     }catch(e){}
 

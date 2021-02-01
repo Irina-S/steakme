@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Оформление заказа - STEAK ME</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/slick.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="./css/style.css?v=1.0.1">
+  <link rel="stylesheet" href="css/responsive.css?v=1.0.1">
+  <style>
+    .slick-slider:not(.slick-initialized) .item:not(:first-of-type){
+      display:none;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  
+  <header class="order-header">
+    <div class="center-wrapper">
+      <div class="order-header__body">
+        <div class="logo">
+          <a href="/">
+            <img src="./img/logo.png" alt="Логотип">
+          </a>
+        </div>
+
+        <a href="#" class="backward-link" ><img src="img/icons/font-icon/back-arrow.svg" alt=""> Вернуться назад</a>
+
+        <a href="tel:+7 (3022) 55-65-56" class="phone-block">
+          <img src="img/icons/font-icon/phone.svg" alt="phone-icon">
+          <span>+7 (3022) 55-65-56</span>
+        </a>
+
+      </div>
+    </div>
+    
+
+  </header>
+
+  <div class="order-page">
+    <div class="center-wrapper">
+
+      <main class="order-page-main">
+        <h1 class="page-title">Оформление заказа</h1>
+
+        <form method="post" action="" id="shopOrderForm" class="shopOrderForm">
+          <ol class="order-steps">
+
+            <li class="order-step success" id="order-step-1">
+              <h4 class="step-title">Укажите данные получателя заказа</h4>
+
+              <div class="field-group col-6">
+                <!-- <label for="name">Введите имя <span>*</span></label> -->
+                <input class="name-field" type="text" name="fullname" id="name" placeholder="Введите имя">
+              </div>
+
+
+              <div class="field-group col-6">
+                <!-- <label for="phoneOF">Введите телефон <span>*</span></label> -->
+                <input class="phone-field" type="text" name="phone" id="phoneOF" placeholder="Введите телефон">
+                <span class="error-field">Неверный формат номера</span>
+              </div>
+
+            </li>
+
+            <li class="order-step success" id="order-step-2"> -->
+              <div class="step-title-block">
+                <h4 class="step-title">Где и как вы хотите получить заказ?</h4>
+                <span class="error-field" style="display: none;">Заполните адрес доставки</span>
+              </div>
+
+              <div class="field-group col-6 radio-group radio-group--delivery">
+                <input type="radio" id="delivery" class="required" name="shk_delivery" value="Доставка по адресу" onclick="SHK.selectDelivery( $(this).val() );">
+                <label for="delivery">
+                  <span>Доставка по адресу</span>
+                  <span>В течение часа, бесплатно от 1000р</span>
+                </label>
+              </div>
+
+              <div class="field-group col-6 radio-group radio-group--myself">
+                <input type="radio" id="by-myself" class="required" name="shk_delivery" value="Самовывоз" onclick="SHK.selectDelivery( $(this).val() );">
+                <label for="by-myself">
+                  <span>Самовывоз</span>
+                  <span>Забрать из ресторана самостоятельно </span>
+                </label>
+              </div>
+
+              <!-- <div class="delivery-tab radio-tab">
+                <div class="field-group col-12">
+                  <label for="street">Введите адрес доставки <sup>*</sup></label>
+                  <input class="col-12 required-group" type="text" id="street" placeholder="Улица" name="street">
+                  <input class="col-3 required-group" type="text" id="house" placeholder="Дом" name="house">
+                  <input class="col-3 required-group" type="text" id="flat" placeholder="Квартира" name="flat">
+                  <input class="col-3 required-group" type="text" id="entrance" placeholder="Подъезд" name="entrance">
+                  <input class="col-3 required-group" type="text" id="floor" placeholder="Этаж" name="floor">
+                  <input class="doorphone" type="checkbox" id="doorphone" value="да" name="doorphone"><label for="doorphone">Домофон работает</label>
+                  <textarea placeholder="Комментарий" name="comment" id="" cols="30" rows="10" class="col-12"></textarea>
+                </div>
+              </div> -->
+
+              <div class="bymslf-tab radio-tab hidden">
+                <div class="contacts">
+                  <div class="map">
+                    <div id="map"></div>
+                  </div>
+                </div>
+              </div>
+
+            </li>
+
+            <li class="order-step required-radio" id="order-step-3">
+              <div class="step-title-block">
+                <h4 class="step-title">Когда вы хотите получить заказ?</h4>
+                <span class="error-field">Выберите время доставки</span>
+              </div>
+
+              <div class="field-group col-6 radio-group radio-group--soon">
+                <input type="radio" id="time-1" class="required" name="time" value="Как можно скорее (до час)">
+                <label for="time-1">
+                  <span>Как можно скорее</span>
+                  <span style="display: block;">Доставим в течение часа</span>
+                </label>
+              </div>
+
+              <div class="field-group col-6 radio-group radio-group--time">
+                <input type="radio" id="time-2" class="required" name="time" value="Выбрать время">
+                <label for="time-2">
+                  <span>Выбрать время</span>
+                  <span style="display: block;">Доставим в выбранное время</span>
+                </label>
+              </div>
+
+              <!-- <div class="choose-time-tab radio-tab hidden">
+                <div class="field-group col-6">
+                  <label for="date">Дата <span>*</span></label>
+                  <select class="wide" name="date" id="date" style="display: none;">
+                    <option value="не выбрано">не выбрано</option>
+                    <option value="сегодня">сегодня</option>
+                    <option value="завтра">завтра</option>
+                  </select><div class="nice-select wide" tabindex="0"><span class="current">не выбрано</span><ul class="list"><li data-value="не выбрано" class="option selected">не выбрано</li><li data-value="сегодня" class="option">сегодня</li><li data-value="завтра" class="option">завтра</li></ul></div>
+                </div>
+
+                <div class="field-group col-6">
+                  <label for="time-value">Время <span>*</span></label>
+                  <select class="wide" name="time-value" id="time-value" style="display: none;">
+                    <option value="не выбрано">не выбрано</option>
+                    <option value="12:30">12:30</option>
+                    <option value="13:00">13:00</option>
+                    <option value="13:30">13:30</option>
+                    <option value="14:00">14:00</option>
+                    <option value="14:30">14:30</option>
+                    <option value="15:00">15:00</option>
+                    <option value="15:30">15:30</option>
+                    <option value="16:00">16:00</option>
+                    <option value="16:30">16:30</option>
+                    <option value="17:00">17:00</option>
+                    <option value="17:30">17:30</option>
+                    <option value="18:00">18:00</option>
+                    <option value="18:30">18:30</option>
+                    <option value="19:00">19:00</option>
+                    <option value="19:30">19:30</option>
+                    <option value="20:00">20:00</option>
+                    <option value="20:30">20:30</option>
+                    <option value="21:00">21:00</option>
+                    <option value="21:30">21:30</option>
+                    <option value="22:00">22:00</option>
+                    <option value="22:30">22:30</option>
+                    <option value="23:00">23:00</option>
+                    <option value="23:30">23:30</option>
+                  </select><div class="nice-select wide" tabindex="0"><span class="current">не выбрано</span><ul class="list"><li data-value="не выбрано" class="option selected">не выбрано</li><li data-value="12:30" class="option">12:30</li><li data-value="13:00" class="option">13:00</li><li data-value="13:30" class="option">13:30</li><li data-value="14:00" class="option">14:00</li><li data-value="14:30" class="option">14:30</li><li data-value="15:00" class="option">15:00</li><li data-value="15:30" class="option">15:30</li><li data-value="16:00" class="option">16:00</li><li data-value="16:30" class="option">16:30</li><li data-value="17:00" class="option">17:00</li><li data-value="17:30" class="option">17:30</li><li data-value="18:00" class="option">18:00</li><li data-value="18:30" class="option">18:30</li><li data-value="19:00" class="option">19:00</li><li data-value="19:30" class="option">19:30</li><li data-value="20:00" class="option">20:00</li><li data-value="20:30" class="option">20:30</li><li data-value="21:00" class="option">21:00</li><li data-value="21:30" class="option">21:30</li><li data-value="22:00" class="option">22:00</li><li data-value="22:30" class="option">22:30</li><li data-value="23:00" class="option">23:00</li><li data-value="23:30" class="option">23:30</li></ul></div>
+                </div>
+              </div> -->
+            </li>
+
+            <li class="order-step required-radio" id="order-step-4">
+              <div class="step-title-block">
+                <h4 class="step-title">Как вам будет удобнее оплатить заказ?</h4>
+                <span class="error-field">Выберите способ оплаты</span>
+              </div>
+
+              <div class="field-group col-6 radio-group radio-group--pay-1 curr-pay">
+                <input type="radio" id="pay-1" class="required pay-type" name="pay-type" value="Наличными курьеру">
+                <label for="pay-1" style="display: block;">
+                  <span>Наличными курьеру</span>
+                  <span>Наличными при доставке по адресу</span>
+                </label>
+              </div>
+
+              <div class="field-group col-6 radio-group radio-group--pay-2 curr-pay">
+                <input type="radio" id="pay-2" class="required pay-type" name="pay-type" value="Картой курьеру">
+                <label for="pay-2" style="display: block;">
+                  <span>Картой курьеру</span>
+                  <span>Картами Visa, MasterCard, Мир</span>
+                </label>
+              </div>
+
+              <div class="field-group col-6 radio-group radio-group--pay-3">
+                <input type="radio" id="pay-3" class="required pay-type" name="pay-type" value="Картой на сайте">
+                <label for="pay-3">
+                  <span>Картой на сайте</span>
+                  <span>Картами Visa, MasterCard, Мир</span>
+                </label>
+              </div>
+
+              <div class="field-group col-6 radio-group radio-group--pay-4">
+                <input type="radio" id="pay-4" class="required pay-type" name="pay-type" value="При самовывозе">
+                <label for="pay-4">
+                  <span>При самовывозе</span>
+                  <span>Оплата картой или наличными в кафе</span>
+                </label>
+              </div>
+
+            </li>
+          </ol>
+        </form>
+
+      </main>
+
+      <aside class="order-summary__outer">
+        <div id="sticky-wrapper" class="sticky-wrapper" style="height: 0px;">
+          <div class="order-summary sticky" data-shopcart="3">
+            <header class="order-summary__header">
+              <div class="order-summary__title">Ваш заказ</div>
+              <!-- <span class="order-summary__summary-count">1 ед.</span> -->
+            </header>
+            <ul class="order-summary__list">
+
+              <li class="order-summary__item order-product-item">
+                <div class="order-product-item__top-line">
+                  <span class="order-product-item__title">Стейк из говяжьей вырезки</span>
+                  <span class="order-product-item__price">179 руб.</span>
+                  <div class="order-product-item__del-btn">
+                    <img src="img/icons/font-icon/trash.svg" alt="">
+                  </div>
+                </div>
+                <div class="order-product-item__bottom-line">
+                  <div class="order-product-item__count">
+                    <button class="shk_count_button dec " type="button">-</button><input type="text" name="count[]" value="1" class="shk-count" style="display: inline-block;"><button class="shk_count_button inc" type="button">+</button>
+                  </div>
+                </div>
+              </li>
+
+              <li class="order-summary__item order-product-item">
+                <div class="order-product-item__top-line">
+                  <span class="order-product-item__title">Мраморный ростбиф</span>
+                  <span class="order-product-item__price">179 руб.</span>
+                  <div class="order-product-item__del-btn">
+                    <img src="img/icons/font-icon/trash.svg" alt="">
+                  </div>
+                </div>
+                <div class="order-product-item__bottom-line">
+                  <div class="order-product-item__count">
+                    <button class="shk_count_button dec " type="button">-</button><input type="text" name="count[]" value="1" class="shk-count" style="display: inline-block;"><button class="shk_count_button inc" type="button">+</button>
+                  </div>
+                </div>
+              </li>
+
+              <li class="order-summary__item order-product-item">
+                <div class="order-product-item__top-line">
+                  <span class="order-product-item__title">Стейк из говяжьей вырезки</span>
+                  <span class="order-product-item__price">179 руб.</span>
+                  <div class="order-product-item__del-btn">
+                    <img src="img/icons/font-icon/trash.svg" alt="">
+                  </div>
+                </div>
+                <div class="order-product-item__bottom-line">
+                  <div class="order-product-item__count">
+                    <button class="shk_count_button dec " type="button">-</button><input type="text" name="count[]" value="1" class="shk-count" style="display: inline-block;"><button class="shk_count_button inc" type="button">+</button>
+                  </div>
+                </div>
+              </li>
+              
+              <li class="order-summary__item">
+                <div class="order-summary__item-title">
+                  <img src="img/icons/font-icon/delivery.svg" alt="">
+                  Доставка
+                </div>
+                <div class="order-summary__item-value text_green">Бесплатно</div>
+              </li>
+
+              <li class="order-summary__item">
+                <div class="order-summary__item-title">
+                  <img src="img/icons/font-icon/promo.svg" alt="">
+                  Промокод
+                </div>
+                <div class="order-summary__item-value text_underlined"><a href="">У меня есть промокод</a></div>
+              </li>
+            </ul>
+              
+    
+            <footer class="order-summary__footer">
+              <div class="order-summary__sum-title">Сумма заказа:</div>
+              <div class="order-summary__sum">319 руб.</div>
+              <button class="btn send-submit-btn" id="cart_btn" disabled="">Оформить заказ</button>
+            </footer>
+          </div>
+
+          <script>
+            document.querySelector('#cart_btn').addEventListener('click', function(){
+                document.cookie = 'ordermade=1'; 
+                document.querySelector("#shopOrderForm").submit();
+            });
+            
+            
+              function canBeProcessed2(){
+                if(document.querySelectorAll('.order-step.success') && document.querySelectorAll('.order-step') && document.querySelectorAll('.order-step.success').length === document.querySelectorAll('.order-step').length){
+                  document.querySelector('.order-summary .send-submit-btn').disabled = false;
+                } else{
+                  document.querySelector('.order-summary .send-submit-btn').disabled = true;
+                }
+              }
+              
+              canBeProcessed2();
+            
+          </script>
+        </div>
+          
+        <script>
+          document.querySelector('#cart_btn').addEventListener('click', function(){
+              document.cookie = 'ordermade=1'; 
+              document.querySelector("#shopOrderForm").submit();
+          });
+          
+            function canBeProcessed2(){
+              if(document.querySelectorAll('.order-step.success') && document.querySelectorAll('.order-step') && document.querySelectorAll('.order-step.success').length === document.querySelectorAll('.order-step').length){
+                document.querySelector('.order-summary .send-submit-btn').disabled = false;
+              } else{
+                document.querySelector('.order-summary .send-submit-btn').disabled = true;
+              }
+            }
+            
+            canBeProcessed2();
+          
+        </script>  
+      </aside>
+      
+    </div>
+  </div>
+
+  <footer class="order-footer">
+    <div class="center-wrapper">
+      <div class="order-footer__body">
+        <div class="logo">
+          <a href="/">
+            <img src="./img/logo.png" alt="Логотип">
+          </a>
+        </div>
+
+        <div class="footer__dev">
+          <span>Разработка сайта — </span>
+          <img src="img/forest-footer-logo.svg" alt="forestweb">
+        </div>
+      </div>
+    </div>
+    
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/jquery.nicescroll.min.js"></script>
+  <script src="./js/slick.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+</html>
