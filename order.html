@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/slick.css">
+  <link rel="stylesheet" href="css/nice-select.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="./css/style.css?v=1.0.1">
@@ -58,15 +59,15 @@
               <h4 class="step-title">Укажите данные получателя заказа</h4>
 
               <div class="field-group col-6">
-                <!-- <label for="name">Введите имя <span>*</span></label> -->
-                <input class="name-field" type="text" name="fullname" id="name" placeholder="Введите имя">
+                <input class="name-field" type="text" name="fullname" id="name">
+                <label for="name" class="placeholder">Введите имя <sup>*</sup></label>
                 <span class="error-field">Это поле обязательное</span>
               </div>
 
 
               <div class="field-group col-6">
-                <!-- <label for="phoneOF">Введите телефон <span>*</span></label> -->
-                <input class="phone-field" type="text" name="phone" id="phoneOF" placeholder="Введите телефон">
+                <input class="phone-field" type="text" name="phone" id="phoneOF">
+                <label for="phoneOF" class="placeholder">Введите телефон <sup>*</sup></label>
                 <span class="error-field">Неверный формат номера</span>
               </div>
 
@@ -79,7 +80,7 @@
               </div>
 
               <div class="field-group col-6 radio-group radio-group--delivery">
-                <input type="radio" id="delivery" class="required" name="shk_delivery" value="Доставка по адресу" onclick="SHK.selectDelivery( $(this).val() );">
+                <input type="radio" id="delivery" class="required" name="shk_delivery" value="Доставка по адресу">
                 <label for="delivery">
                   <span>Доставка по адресу</span>
                   <span>В течение часа, бесплатно от 1000р</span>
@@ -87,7 +88,7 @@
               </div>
 
               <div class="field-group col-6 radio-group radio-group--myself">
-                <input type="radio" id="by-myself" class="required" name="shk_delivery" value="Самовывоз" onclick="SHK.selectDelivery( $(this).val() );">
+                <input type="radio" id="by-myself" class="required" name="shk_delivery" value="Самовывоз">
                 <label for="by-myself">
                   <span>Самовывоз</span>
                   <span>Забрать из ресторана самостоятельно </span>
@@ -95,25 +96,46 @@
               </div>
 
               <div class="delivery-tab radio-tab">
-                <div class="field-group col-12">
-                  <label for="street">Введите адрес доставки <sup>*</sup></label>
-                  <input class="col-12 required-group" type="text" id="street" placeholder="Улица" name="street">
-                  <input class="col-3 required-group" type="text" id="house" placeholder="Дом" name="house">
-                  <input class="col-3 required-group" type="text" id="flat" placeholder="Квартира" name="flat">
-                  <input class="col-3 required-group" type="text" id="entrance" placeholder="Подъезд" name="entrance">
-                  <input class="col-3 required-group" type="text" id="floor" placeholder="Этаж" name="floor">
+                <!-- <div class="field-group"> -->
+                  <label>Введите адрес доставки <sup>*</sup></label>
+                  <div class="field-group col-12">
+                    <input class="required-group" type="text" id="street"name="street">
+                    <label class="placeholder">Улица</label>
+                  </div>
+                  <div class="field-group col-3">
+                    <input class="required-group" type="text" id="house" name="house">
+                    <label class="placeholder">Дом</label>
+                  </div>
+                  <div class="field-group col-3">
+                    <input class="required-group" type="text" id="flat" name="flat">
+                    <label class="placeholder">Квартира</label>
+                  </div>
+                  <div class="field-group col-3">
+                    <input class="required-group" type="text" id="entrance" name="entrance">
+                    <label class="placeholder">Подъезд</label>
+                  </div>
+                  <div class="field-group col-3">
+                    <input class="required-group" type="text" id="floor" name="floor">
+                    <label class="placeholder">Этаж</label>
+                  </div>
+                  
                   <input class="doorphone" type="checkbox" id="doorphone" value="да" name="doorphone"><label for="doorphone">Домофон работает</label>
-                  <textarea placeholder="Комментарий" name="comment" id="" cols="30" rows="10" class="col-12"></textarea>
-                </div>
+
+                  <div class="field-group col-12">
+                    <textarea name="comment" id="" cols="30" rows="10"></textarea>
+                    <label class="placeholder">Комментарий</label>
+                  </div>
+                  
+                <!-- </div> -->
               </div>
 
-              <!-- <div class="bymslf-tab radio-tab hidden">
-                <div class="contacts">
-                  <div class="map">
+              <div class="bymslf-tab radio-tab">
+                <!-- <div class=""> -->
+                  <!-- <div class="map"> -->
                     <div id="map"></div>
-                  </div>
-                </div>
-              </div> -->
+                  <!-- </div> -->
+                <!-- </div> -->
+              </div>
 
             </li>
 
@@ -139,20 +161,20 @@
                 </label>
               </div>
 
-              <!-- <div class="choose-time-tab radio-tab hidden">
+              <div class="choose-time-tab radio-tab">
                 <div class="field-group col-6">
-                  <label for="date">Дата <span>*</span></label>
+                  <label for="date">Дата <sup>*</sup></label>
                   <select class="wide" name="date" id="date" style="display: none;">
-                    <option value="не выбрано">не выбрано</option>
-                    <option value="сегодня">сегодня</option>
-                    <option value="завтра">завтра</option>
+                    <option value="не выбрано">Не выбрано</option>
+                    <option value="сегодня">Сегодня</option>
+                    <option value="завтра">Завтра</option>
                   </select><div class="nice-select wide" tabindex="0"><span class="current">не выбрано</span><ul class="list"><li data-value="не выбрано" class="option selected">не выбрано</li><li data-value="сегодня" class="option">сегодня</li><li data-value="завтра" class="option">завтра</li></ul></div>
                 </div>
 
                 <div class="field-group col-6">
-                  <label for="time-value">Время <span>*</span></label>
+                  <label for="time-value">Время <sup>*</sup></label>
                   <select class="wide" name="time-value" id="time-value" style="display: none;">
-                    <option value="не выбрано">не выбрано</option>
+                    <option value="не выбрано">Не выбрано</option>
                     <option value="12:30">12:30</option>
                     <option value="13:00">13:00</option>
                     <option value="13:30">13:30</option>
@@ -174,11 +196,9 @@
                     <option value="21:30">21:30</option>
                     <option value="22:00">22:00</option>
                     <option value="22:30">22:30</option>
-                    <option value="23:00">23:00</option>
-                    <option value="23:30">23:30</option>
                   </select><div class="nice-select wide" tabindex="0"><span class="current">не выбрано</span><ul class="list"><li data-value="не выбрано" class="option selected">не выбрано</li><li data-value="12:30" class="option">12:30</li><li data-value="13:00" class="option">13:00</li><li data-value="13:30" class="option">13:30</li><li data-value="14:00" class="option">14:00</li><li data-value="14:30" class="option">14:30</li><li data-value="15:00" class="option">15:00</li><li data-value="15:30" class="option">15:30</li><li data-value="16:00" class="option">16:00</li><li data-value="16:30" class="option">16:30</li><li data-value="17:00" class="option">17:00</li><li data-value="17:30" class="option">17:30</li><li data-value="18:00" class="option">18:00</li><li data-value="18:30" class="option">18:30</li><li data-value="19:00" class="option">19:00</li><li data-value="19:30" class="option">19:30</li><li data-value="20:00" class="option">20:00</li><li data-value="20:30" class="option">20:30</li><li data-value="21:00" class="option">21:00</li><li data-value="21:30" class="option">21:30</li><li data-value="22:00" class="option">22:00</li><li data-value="22:30" class="option">22:30</li><li data-value="23:00" class="option">23:00</li><li data-value="23:30" class="option">23:30</li></ul></div>
                 </div>
-              </div> -->
+              </div>
             </li>
 
             <li class="order-step required-radio" id="order-step-4">
@@ -226,8 +246,8 @@
       </main>
 
       <aside class="order-summary__outer">
-        <div id="sticky-wrapper" class="sticky-wrapper" style="height: 0px;">
-          <div class="order-summary sticky" data-shopcart="3">
+        <div id="sticky-wrapper">
+          <div class="order-summary" data-shopcart="3">
             <header class="order-summary__header">
               <div class="order-summary__title">Ваш заказ</div>
               <!-- <span class="order-summary__summary-count">1 ед.</span> -->
@@ -369,6 +389,8 @@
   <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
   <script src="js/map.js"></script>
   <script src="js/jquery.nicescroll.min.js"></script>
+  <script src="js/jquery.mcustomscrollbar.concat.min.js"></script>
+  <script src="js/jquery.nice-select.min.js"></script>
   <script src="./js/slick.min.js"></script>
   <script src="js/jquery.sticky.js"></script>
   <script src="./js/script.js"></script>

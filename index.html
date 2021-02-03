@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/slick.css">
+  <link rel="stylesheet" href="css/nice-select.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="./css/style.css?v=1.0.1">
@@ -132,556 +133,561 @@
 
 <div class="wrapper">
 
-  <div class="mobile-header">
+  <div class="inner-wrapper">
 
-    <div class="main-navigation-btn">
-      <i class="icon-menu"></i>
-    </div>
+    <div class="mobile-header">
 
-    <div class="logo">
-      <a href="/">
-        <img src="./img/logo.png" alt="Логотип">
-      </a>
-    </div>
-
-    <div class="mobile-header__phone">
-      <a href="tel:+7 (3022) 55-65-56" class="phone-block">
-        <i class="icon-phone"></i>
-      </a>
-    </div>
-
-  </div>
-  
-  <header class="header">
-    
-    <div class="btn btn_transparent mobile-catalog-btn">
-      <i class="icon-all"></i>
-      <span>Каталог</span>
-    </div>
-
-    <nav class="main-navigation">
-      <div class="close-btn">
-        <i class="icon-cancel"></i>
+      <div class="main-navigation-btn">
+        <i class="icon-menu"></i>
       </div>
+
       <div class="logo">
         <a href="/">
           <img src="./img/logo.png" alt="Логотип">
         </a>
       </div>
-      <ul class="main-navigation__list">
-        <li class="main-navigation__item"><a href="#" class="main-navigation__link">Главная</a></li>
-        <li class="main-navigation__item"><a href="#" class="main-navigation__link">О нас</a></li>
-        <li class="main-navigation__item"><a href="#" class="main-navigation__link">Доставка</a></li>
-        <li class="main-navigation__item"><a href="#" class="main-navigation__link">Контакты</a></li>
-      </ul>
-    </nav>
 
-    <div class="header-adv">
-      <div class="header-adv__inner">
-        Доставка стейков по Чите в течение часа
+      <div class="mobile-header__phone">
+        <a href="tel:+7 (3022) 55-65-56" class="">
+          <i class="icon-phone"></i>
+        </a>
       </div>
+
     </div>
-
-    <a href="tel:+7 (3022) 55-65-56" class="phone-block">
-      <img src="img/icons/font-icon/phone.svg" alt="phone-icon">
-      <span>+7 (3022) 55-65-56</span>
-    </a>
-
-    <a href="#" class="header__cart header-cart">
-      <div class="header-cart__icon">
-        <img src="img/icons/font-icon/cart.svg" alt="корзина" class="">
-      </div>
-      <span class="header-cart__text">
-        <span>Корзина: </span>
-        <span class="header-cart__price">1750 руб.</span>
-      </span>
-    </a>
-  </header>
-
-  <main class="main">
-    <div class="main-slider" id="main-slider">
-      <div class="main-slider__item">
-        <a href="#">
-          <picture>
-            <source srcset="./img/slider.webp" media="(max-width: 768px)">
-            <source srcset="./img/slider.webp">
-            <img srcset="./img/slider.webp" alt="Slider image">
-          </picture>
-        </a>
+    
+    <header class="header">
+      
+      <div class="btn btn_transparent mobile-catalog-btn">
+        <i class="icon-all"></i>
+        <span>Каталог</span>
       </div>
 
-      <div class="main-slider__item">
-        <a href="#">
-          <picture>
-            <source srcset="./img/slider.webp" media="(max-width: 768px)">
-            <source srcset="./img/slider.webp">
-            <img srcset="./img/slider.webp" alt="Slider image">
-          </picture>
-        </a>
+      <nav class="main-navigation">
+        <div class="close-btn">
+          <i class="icon-cancel"></i>
+        </div>
+        <div class="logo">
+          <a href="/">
+            <img src="./img/logo.png" alt="Логотип">
+          </a>
+        </div>
+        <ul class="main-navigation__list">
+          <li class="main-navigation__item"><a href="#" class="main-navigation__link">Главная</a></li>
+          <li class="main-navigation__item"><a href="#" class="main-navigation__link">О нас</a></li>
+          <li class="main-navigation__item"><a href="#" class="main-navigation__link">Доставка</a></li>
+          <li class="main-navigation__item"><a href="#" class="main-navigation__link">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-adv">
+        <div class="header-adv__inner">
+          Доставка стейков по Чите в течение часа
+        </div>
       </div>
 
-      <div class="main-slider__item">
-        <a href="#">
-          <picture>
-            <source srcset="./img/slider.webp" media="(max-width: 768px)">
-            <source srcset="./img/slider.webp">
-            <img srcset="./img/slider.webp" alt="Slider image">
-          </picture>
-        </a>
-      </div>
+      <a href="tel:+7 (3022) 55-65-56" class="phone-block">
+        <img src="img/icons/font-icon/phone.svg" alt="phone-icon">
+        <span>+7 (3022) 55-65-56</span>
+      </a>
 
-      <div class="main-slider__item">
-        <a href="#">
-          <picture>
-            <source srcset="./img/slider.webp" media="(max-width: 768px)">
-            <source srcset="./img/slider.webp">
-            <img srcset="./img/slider.webp" alt="Slider image">
-          </picture>
-        </a>
-      </div>
-    </div>
-    <div class="adv">
-      <ul class="adv-list">
-        <li class="adv-list__item">
-          <img src="img/icons/adv-icons/location.svg" alt="местоположение" class="adv-list__icon">
-          <div class="adv-list__text">Находимся в самом центре </div>
-        </li>
-        <li class="adv-list__item">
-          <img src="img/icons/adv-icons/meat.svg" alt="стейк" class="adv-list__icon">
-          <div class="adv-list__text">Сочные стейки, и шашлыки </div>
-        </li>
-        <li class="adv-list__item">
-          <img src="img/icons/adv-icons/fire.svg" alt="огонь" class="adv-list__icon">
-          <div class="adv-list__text">Настоящий огонь</div>
-        </li>
-        <li class="adv-list__item">
-          <img src="img/icons/adv-icons/coctail.svg" alt="коктейль" class="adv-list__icon">
-          <div class="adv-list__text">Разнообразие коктейлей</div>
-        </li>
-        <li class="adv-list__item">
-          <img src="img/icons/adv-icons/beer.svg" alt="пиво" class="adv-list__icon">
-          <div class="adv-list__text">Пенное и охлажденное пиво</div>
-        </li>
-        <li class="adv-list__item">
-          <img src="img/icons/adv-icons/hookah.svg" alt="кальян" class="adv-list__icon">
-          <div class="adv-list__text">Дымные и густые кальяны</div>
-        </li>
-      </ul>
-    </div>
-    <section class="popular-items">
-      <h2 class="section-title">Популярные блюда</h2>
-      <div class="items-container items-container_reduced">
+      <a href="#" class="header__cart header-cart">
+        <div class="header-cart__icon">
+          <img src="img/icons/font-icon/cart.svg" alt="корзина" class="">
+        </div>
+        <span class="header-cart__text">
+          <span>Корзина: </span>
+          <span class="header-cart__price">1750 руб.</span>
+        </span>
+      </a>
+    </header>
 
-        <div class="item">
-          <div class="item__photo">
-            <a href="#fast1" data-fancybox>
-              <img src="img/items/salad.png" alt="салат" class="item__img">
-              <img src="img/discount.svg" class="item__discount" alt="скидка">
-            </a>
-          </div>
-          <div class="item__info">
-            <div class="item__name">Салат легкий</div>
-            <div class="item__buy">
-              <form action="" class="item-form">
-                <button class="btn item-form__btn">
-                  <div class="item-form__btn-icon"></div>
-                  <span class="item__price">179 руб.</span>
-                </button>
-              </form>
-            </div>
-          </div>
-          <div class="item__old-price">
-            Старая цена:
-            <div>
-              250 руб.
-              <span class="stroke"></span>
-            </div>
-          </div>
-          <div class="fast-view" id="fast1">
-            <div class="fast-view__cont">
-              <div class="item__photo">
+    <main class="main">
+      <div class="main-slider" id="main-slider">
+        <div class="main-slider__item">
+          <a href="#">
+            <picture>
+              <source srcset="./img/slider.webp" media="(max-width: 768px)">
+              <source srcset="./img/slider.webp">
+              <img srcset="./img/slider.webp" alt="Slider image">
+            </picture>
+          </a>
+        </div>
+
+        <div class="main-slider__item">
+          <a href="#">
+            <picture>
+              <source srcset="./img/slider.webp" media="(max-width: 768px)">
+              <source srcset="./img/slider.webp">
+              <img srcset="./img/slider.webp" alt="Slider image">
+            </picture>
+          </a>
+        </div>
+
+        <div class="main-slider__item">
+          <a href="#">
+            <picture>
+              <source srcset="./img/slider.webp" media="(max-width: 768px)">
+              <source srcset="./img/slider.webp">
+              <img srcset="./img/slider.webp" alt="Slider image">
+            </picture>
+          </a>
+        </div>
+
+        <div class="main-slider__item">
+          <a href="#">
+            <picture>
+              <source srcset="./img/slider.webp" media="(max-width: 768px)">
+              <source srcset="./img/slider.webp">
+              <img srcset="./img/slider.webp" alt="Slider image">
+            </picture>
+          </a>
+        </div>
+      </div>
+      <div class="adv">
+        <ul class="adv-list">
+          <li class="adv-list__item">
+            <img src="img/icons/adv-icons/location.svg" alt="местоположение" class="adv-list__icon">
+            <div class="adv-list__text">Находимся в самом центре </div>
+          </li>
+          <li class="adv-list__item">
+            <img src="img/icons/adv-icons/meat.svg" alt="стейк" class="adv-list__icon">
+            <div class="adv-list__text">Сочные стейки, и шашлыки </div>
+          </li>
+          <li class="adv-list__item">
+            <img src="img/icons/adv-icons/fire.svg" alt="огонь" class="adv-list__icon">
+            <div class="adv-list__text">Настоящий огонь</div>
+          </li>
+          <li class="adv-list__item">
+            <img src="img/icons/adv-icons/coctail.svg" alt="коктейль" class="adv-list__icon">
+            <div class="adv-list__text">Разнообразие коктейлей</div>
+          </li>
+          <li class="adv-list__item">
+            <img src="img/icons/adv-icons/beer.svg" alt="пиво" class="adv-list__icon">
+            <div class="adv-list__text">Пенное и охлажденное пиво</div>
+          </li>
+          <li class="adv-list__item">
+            <img src="img/icons/adv-icons/hookah.svg" alt="кальян" class="adv-list__icon">
+            <div class="adv-list__text">Дымные и густые кальяны</div>
+          </li>
+        </ul>
+      </div>
+      <section class="popular-items">
+        <h2 class="section-title">Популярные блюда</h2>
+        <div class="items-container items-container_reduced">
+
+          <div class="item">
+            <div class="item__photo">
+              <a href="#fast1" data-fancybox>
                 <img src="img/items/salad.png" alt="салат" class="item__img">
                 <img src="img/discount.svg" class="item__discount" alt="скидка">
+              </a>
+            </div>
+            <div class="item__info">
+              <div class="item__name">Салат легкий</div>
+              <div class="item__buy">
+                <form action="" class="item-form">
+                  <button class="btn item-form__btn">
+                    <div class="item-form__btn-icon"></div>
+                    <span class="item__price">179 руб.</span>
+                  </button>
+                </form>
               </div>
-              <div class="item__info">
-                <div class="item__name">Салат легкий</div>
-                <div class="item__weight">170/50 г.</div>
-                <div class="item__text text">Микс мяса говядины, свинины и баранины, все это в сочетании с баклажаном, красным и зеленым перцем, кабачком и луком.</div>
-                <div class="item__buy">
-                  <form action="" class="item-form">
-                    <button class item-form__btn">
-                      <div class="item-form__btn-icon"></div>
-                      <span class="item__price">179 руб.</span>
-                    </button>
-                  </form>
-                  <div class="item__add">Добавь гарнир на выбор всего за 89 руб.</div>
+            </div>
+            <div class="item__old-price">
+              Старая цена:
+              <div>
+                250 руб.
+                <span class="stroke"></span>
+              </div>
+            </div>
+
+            <div class="fast-view" id="fast1">
+              <div class="fast-view__cont">
+                <div class="item__photo">
+                  <img src="img/items/salad.png" alt="салат" class="item__img">
+                  <img src="img/discount.svg" class="item__discount" alt="скидка">
                 </div>
-                <div class="item__old-price">
-                  Старая цена:
-                  <div>
-                    250 руб.
-                    <span class="stroke"></span>
+                <div class="item__info">
+                  <div class="item__name">Салат легкий</div>
+                  <div class="item__weight">170/50 г.</div>
+                  <div class="item__text text">Микс мяса говядины, свинины и баранины, все это в сочетании с баклажаном, красным и зеленым перцем, кабачком и луком.</div>
+                  <div class="item__buy">
+                    <form action="" class="item-form">
+                      <button class="btn btn_filled item-form__btn">
+                        <div class="item-form__btn-icon"></div>
+                        <span class="item__price">179 руб.</span>
+                      </button>
+                    </form>
+                    <div class="item__add">Добавь гарнир на выбор всего за <b>89 руб.</b></div>
                   </div>
+                  <div class="item__old-price">
+                    Старая цена:
+                    <div>
+                      250 руб.
+                      <span class="stroke"></span>
+                    </div>
+                  </div>
+                  <div class="item__delivery"><img src="img/icons/font-icon/delivery.svg" alt="доставка"> <span>Бесплатная доставка при заказе от 1 000 руб.</span></div>
                 </div>
-                <div class="item__delivery"><img src="img/icons/font-icon/delivery.svg" alt="доставка"> Бесплатная доставка при заказе от 1 000 руб.</div>
+                <div class="item__link">Перейти в карточку блюда</div>
+              </div>   
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item__photo">
+              <img src="img/items/pork.png" alt="салат" class="item__img">
+            </div>
+            <div class="item__info">
+              <div class="item__name">Медальон из свинины</div>
+              <div class="item__buy">
+                <form action="" class="item-form">
+                  <button class="btn item-form__btn">
+                    <div class="item-form__btn-icon"></div>
+                    <span class="item__price">179 руб.</span>
+                  </button>
+                </form>
               </div>
-              <div class="item__link">Перейти в карточку блюда</div>
-            </div>   
+            </div>
           </div>
-        </div>
 
-        <div class="item">
-          <div class="item__photo">
-            <img src="img/items/pork.png" alt="салат" class="item__img">
+          <div class="item">
+            <div class="item__photo">
+              <!-- <img src="img/items/salad.png" alt="салат" class="item__img"> -->
+              <img src="img/discount.svg" class="item__discount" alt="скидка">
+            </div>
+            <div class="item__info">
+              <div class="item__name">Стейк из говяжьей вырезки</div>
+              <div class="item__buy">
+                <form action="" class="item-form">
+                  <button class="btn item-form__btn">
+                    <div class="item-form__btn-icon"></div>
+                    <span class="item__price">179 руб.</span>
+                  </button>
+                </form>
+              </div>
+            </div>
+            <div class="item__old-price">
+              Старая цена:
+              <div>
+                250 руб.
+                <span class="stroke"></span>
+              </div>
+            </div>
           </div>
-          <div class="item__info">
-            <div class="item__name">Медальон из свинины</div>
-            <div class="item__buy">
-              <form action="" class="item-form">
-                <button class="btn item-form__btn">
-                  <div class="item-form__btn-icon"></div>
-                  <span class="item__price">179 руб.</span>
-                </button>
-              </form>
+
+          <div class="item">
+            <div class="item__photo">
+              <img src="img/items/rostbeef.png" alt="салат" class="item__img">
+            </div>
+            <div class="item__info">
+              <div class="item__name">Мраморный ростбиф</div>
+              <div class="item__buy">
+                <form action="" class="item-form">
+                  <button class="btn item-form__btn">
+                    <div class="item-form__btn-icon"></div>
+                    <span class="item__price">179 руб.</span>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item__photo">
+              <img src="img/items/pork.png" alt="салат" class="item__img">
+            </div>
+            <div class="item__info">
+              <div class="item__name">Медальон из свинины</div>
+              <div class="item__buy">
+                <form action="" class="item-form">
+                  <button class="btn item-form__btn">
+                    <div class="item-form__btn-icon"></div>
+                    <span class="item__price">179 руб.</span>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+          
+          <div class="item">
+            <div class="item__photo">
+              <img src="img/items/rostbeef.png" alt="салат" class="item__img">
+            </div>
+            <div class="item__info">
+              <div class="item__name">Мраморный ростбиф</div>
+              <div class="item__buy">
+                <form action="" class="item-form">
+                  <button class="btn item-form__btn">
+                    <div class="item-form__btn-icon"></div>
+                    <span class="item__price">179 руб.</span>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item__photo">
+              <img src="img/items/salad.png" alt="салат" class="item__img">
+            </div>
+            <div class="item__info">
+              <div class="item__name">Салат легкий</div>
+              <div class="item__buy">
+                <form action="" class="item-form">
+                  <button class="btn item-form__btn">
+                    <div class="item-form__btn-icon"></div>
+                    <span class="item__price">179 руб.</span>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item__photo">
+              <img src="img/items/steak.png" alt="салат" class="item__img">
+              <img src="img/discount.svg" class="item__discount" alt="скидка">
+            </div>
+            <div class="item__info">
+              <div class="item__name">Стейк из говяжьей вырезки</div>
+              <div class="item__buy">
+                <form action="" class="item-form">
+                  <button class="btn item-form__btn">
+                    <div class="item-form__btn-icon"></div>
+                    <span class="item__price">179 руб.</span>
+                  </button>
+                </form>
+              </div>
+            </div>
+            <div class="item__old-price">
+              Старая цена:
+              <div>
+                250 руб.
+                <span class="stroke"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item__photo">
+              <img src="img/items/salad.png" alt="салат" class="item__img">
+            </div>
+            <div class="item__info">
+              <div class="item__name">Салат легкий</div>
+              <div class="item__buy">
+                <form action="" class="item-form">
+                  <button class="btn item-form__btn">
+                    <div class="item-form__btn-icon"></div>
+                    <span class="item__price">179 руб.</span>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item__photo">
+              <img src="img/items/pork.png" alt="салат" class="item__img">
+            </div>
+            <div class="item__info">
+              <div class="item__name">Медальон из свинины</div>
+              <div class="item__buy">
+                <form action="" class="item-form">
+                  <button class="btn item-form__btn">
+                    <div class="item-form__btn-icon"></div>
+                    <span class="item__price">179 руб.</span>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item__photo">
+              <img src="img/items/steak.png" alt="салат" class="item__img">
+              <img src="img/discount.svg" class="item__discount" alt="скидка">
+            </div>
+            <div class="item__info">
+              <div class="item__name">Стейк из говяжьей вырезки</div>
+              <div class="item__buy">
+                <form action="" class="item-form">
+                  <button class="btn item-form__btn">
+                    <div class="item-form__btn-icon"></div>
+                    <span class="item__price">179 руб.</span>
+                  </button>
+                </form>
+              </div>
+            </div>
+            <div class="item__old-price">
+              Старая цена:
+              <div>
+                250 руб.
+                <span class="stroke"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item__photo">
+              <img src="img/items/rostbeef.png" alt="салат" class="item__img">
+            </div>
+            <div class="item__info">
+              <div class="item__name">Мраморный ростбиф</div>
+              <div class="item__buy">
+                <form action="" class="item-form">
+                  <button class="btn item-form__btn">
+                    <div class="item-form__btn-icon"></div>
+                    <span class="item__price">179 руб.</span>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="link_learn-more">
+            <a href="" class="link">Смотреть еще</a>
+          </div>
+          
+
+        </div>
+      </section>
+
+      <section class="aboutus">
+        <div class="aboutus__title">
+          <img src="img/aboutus-title.svg" alt="про ресторан">
+          <img src="img/aboutus-dots.svg" alt="точки" class="aboutus__dots">
+          <!-- <div class="aboutus__dots"></div> -->
+        </div>
+        <div class="aboutus__content">
+          <h3 class="section-title_small">STEAK ME — библиотека, где созданы все условия, для Вашего комфортного и непринужденного отдыха</h3>
+          <div class="aboutus__text text">
+            <p>РОДИЗИО - наиболее популярная традиция обслуживания бразильской кухни, также известная как «ешь, сколько хочешь» и эту уникальную концепцию мы предлагаем в Grill do Brasil.</p>
+            <p>Все началось в регионе Пампас, на юге Бразилии, и распространилось по всей стране. «Гаучо-способ» приготовления мяса в сочетании с особым видом обслуживания завоевал уже Европу и Америку.</p>
+          </div>
+          <a href="#" class="btn btn_filled">Читать продолжение</a>
+        </div>
+        <div class="aboutus__photo">
+          <img src="img/aboutus-photo.png" alt="фото">
+        </div>
+      </section>
+
+      <section class="insta">
+        <h2 class="section-title">Наш инстаграм: <a href="https://www.instagram.com/steakme.chita" class="link">@steakme.chita</a></h2>
+        <div class="items-container">
+
+          <div class="insta-item">
+            <div class="insta-item__photo">
+              <img src="img/insta-items/1.png" alt="фото">
+            </div>
+            <div class="insta-item__title">
+              <a href="#" class="insta-item__link">@breehopp</a>
+              <div class="insta-item__likes">
+                <img src="img/icons/font-icon/like.svg" alt="лайк">
+                <span>21</span>
+              </div>
+            </div>
+            <div class="insta-item__text">
+              Another steak appreciation post.<br>
+              Because, steak. 
+            </div>
+          </div>
+
+          <div class="insta-item">
+            <div class="insta-item__photo">
+              <img src="img/insta-items/2.png" alt="фото">
+            </div>
+            <div class="insta-item__title">
+              <a href="#" class="insta-item__link">@breehopp</a>
+              <div class="insta-item__likes">
+                <img src="img/icons/font-icon/like.svg" alt="лайк">
+                <span>21</span>
+              </div>
+            </div>
+            <div class="insta-item__text">
+              Another steak appreciation post.<br>
+              Because, steak. 
+            </div>
+          </div>
+
+          <div class="insta-item">
+            <div class="insta-item__photo">
+              <img src="img/insta-items/3.png" alt="фото">
+            </div>
+            <div class="insta-item__title">
+              <a href="#" class="insta-item__link">@breehopp</a>
+              <div class="insta-item__likes">
+                <img src="img/icons/font-icon/like.svg" alt="лайк">
+                <span>21</span>
+              </div>
+            </div>
+            <div class="insta-item__text">
+              Another steak appreciation post.<br>
+              Because, steak. 
+            </div>
+          </div>
+
+          <div class="insta-item">
+            <div class="insta-item__photo">
+              <img src="img/insta-items/4.png" alt="фото">
+            </div>
+            <div class="insta-item__title">
+              <a href="#" class="insta-item__link">@breehopp</a>
+              <div class="insta-item__likes">
+                <img src="img/icons/font-icon/like.svg" alt="лайк">
+                <span>21</span>
+              </div>
+            </div>
+            <div class="insta-item__text">
+              Another steak appreciation post.<br>
+              Because, steak. 
+            </div>
+          </div>
+    
+        </div>
+      </section>
+
+      <section class="contacts">
+        <div class="contacts-block">
+          <div class="contacts-item">
+            <div class="contacts-item__name">Телефон:</div>
+            <div class="contacts-item__value">
+              <img src="img/icons/font-icon/phone.svg" alt="" class="contacts-item__icon">
+              +7 (302) 255-65-56
+            </div>
+          </div>
+          <div class="contacts-item">
+            <div class="contacts-item__name">Адрес:</div>
+            <div class="contacts-item__value">
+              <img src="img/icons/font-icon/location.svg" alt="" class="contacts-item__icon">
+              г. Чита, ул. Ленина, 81
+            </div>
+          </div>
+          <div class="contacts-item">
+            <div class="contacts-item__name">Режим работы:</div>
+            <div class="contacts-item__value">
+              <img src="img/icons/font-icon/clock.svg" alt="" class="contacts-item__icon">
+              12.00 - 23.00 (Пн.-Вс.)
+            </div>
+          </div>
+          <div class="contacts-item">
+            <div class="contacts-item__name">Мы в соц. сетях:</div>
+            <div class="contacts-item__value socials">
+              <a href="#" class="social"><img src="img/icons/font-icon/fb.svg" alt="fb"></a>
+              <a href="#" class="social"><img src="img/icons/font-icon/vk.svg" alt="vk"></a>
+              <a href="#" class="social"><img src="img/icons/font-icon/insta.svg" alt="insta"></a>
+              <a href="#" class="social"><img src="img/icons/font-icon/youtube.svg" alt="yb"></a>
+              <a href="#" class="social"><img src="img/icons/font-icon/ok.svg" alt="ok"></a>
             </div>
           </div>
         </div>
+        <div id="map">
 
-        <div class="item">
-          <div class="item__photo">
-            <!-- <img src="img/items/salad.png" alt="салат" class="item__img"> -->
-            <img src="img/discount.svg" class="item__discount" alt="скидка">
-          </div>
-          <div class="item__info">
-            <div class="item__name">Стейк из говяжьей вырезки</div>
-            <div class="item__buy">
-              <form action="" class="item-form">
-                <button class="btn item-form__btn">
-                  <div class="item-form__btn-icon"></div>
-                  <span class="item__price">179 руб.</span>
-                </button>
-              </form>
-            </div>
-          </div>
-          <div class="item__old-price">
-            Старая цена:
-            <div>
-              250 руб.
-              <span class="stroke"></span>
-            </div>
-          </div>
         </div>
+      </section>
 
-        <div class="item">
-          <div class="item__photo">
-            <img src="img/items/rostbeef.png" alt="салат" class="item__img">
-          </div>
-          <div class="item__info">
-            <div class="item__name">Мраморный ростбиф</div>
-            <div class="item__buy">
-              <form action="" class="item-form">
-                <button class="btn item-form__btn">
-                  <div class="item-form__btn-icon"></div>
-                  <span class="item__price">179 руб.</span>
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
+    </main>
+  </div>
 
-        <div class="item">
-          <div class="item__photo">
-            <img src="img/items/pork.png" alt="салат" class="item__img">
-          </div>
-          <div class="item__info">
-            <div class="item__name">Медальон из свинины</div>
-            <div class="item__buy">
-              <form action="" class="item-form">
-                <button class="btn item-form__btn">
-                  <div class="item-form__btn-icon"></div>
-                  <span class="item__price">179 руб.</span>
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-        
-        <div class="item">
-          <div class="item__photo">
-            <img src="img/items/rostbeef.png" alt="салат" class="item__img">
-          </div>
-          <div class="item__info">
-            <div class="item__name">Мраморный ростбиф</div>
-            <div class="item__buy">
-              <form action="" class="item-form">
-                <button class="btn item-form__btn">
-                  <div class="item-form__btn-icon"></div>
-                  <span class="item__price">179 руб.</span>
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="item__photo">
-            <img src="img/items/salad.png" alt="салат" class="item__img">
-          </div>
-          <div class="item__info">
-            <div class="item__name">Салат легкий</div>
-            <div class="item__buy">
-              <form action="" class="item-form">
-                <button class="btn item-form__btn">
-                  <div class="item-form__btn-icon"></div>
-                  <span class="item__price">179 руб.</span>
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="item__photo">
-            <img src="img/items/steak.png" alt="салат" class="item__img">
-            <img src="img/discount.svg" class="item__discount" alt="скидка">
-          </div>
-          <div class="item__info">
-            <div class="item__name">Стейк из говяжьей вырезки</div>
-            <div class="item__buy">
-              <form action="" class="item-form">
-                <button class="btn item-form__btn">
-                  <div class="item-form__btn-icon"></div>
-                  <span class="item__price">179 руб.</span>
-                </button>
-              </form>
-            </div>
-          </div>
-          <div class="item__old-price">
-            Старая цена:
-            <div>
-              250 руб.
-              <span class="stroke"></span>
-            </div>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="item__photo">
-            <img src="img/items/salad.png" alt="салат" class="item__img">
-          </div>
-          <div class="item__info">
-            <div class="item__name">Салат легкий</div>
-            <div class="item__buy">
-              <form action="" class="item-form">
-                <button class="btn item-form__btn">
-                  <div class="item-form__btn-icon"></div>
-                  <span class="item__price">179 руб.</span>
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="item__photo">
-            <img src="img/items/pork.png" alt="салат" class="item__img">
-          </div>
-          <div class="item__info">
-            <div class="item__name">Медальон из свинины</div>
-            <div class="item__buy">
-              <form action="" class="item-form">
-                <button class="btn item-form__btn">
-                  <div class="item-form__btn-icon"></div>
-                  <span class="item__price">179 руб.</span>
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="item__photo">
-            <img src="img/items/steak.png" alt="салат" class="item__img">
-            <img src="img/discount.svg" class="item__discount" alt="скидка">
-          </div>
-          <div class="item__info">
-            <div class="item__name">Стейк из говяжьей вырезки</div>
-            <div class="item__buy">
-              <form action="" class="item-form">
-                <button class="btn item-form__btn">
-                  <div class="item-form__btn-icon"></div>
-                  <span class="item__price">179 руб.</span>
-                </button>
-              </form>
-            </div>
-          </div>
-          <div class="item__old-price">
-            Старая цена:
-            <div>
-              250 руб.
-              <span class="stroke"></span>
-            </div>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="item__photo">
-            <img src="img/items/rostbeef.png" alt="салат" class="item__img">
-          </div>
-          <div class="item__info">
-            <div class="item__name">Мраморный ростбиф</div>
-            <div class="item__buy">
-              <form action="" class="item-form">
-                <button class="btn item-form__btn">
-                  <div class="item-form__btn-icon"></div>
-                  <span class="item__price">179 руб.</span>
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-        <div class="link_learn-more">
-          <a href="" class="link">Смотреть еще</a>
-        </div>
-        
-
-      </div>
-    </section>
-
-    <section class="aboutus">
-      <div class="aboutus__title">
-        <img src="img/aboutus-title.svg" alt="про ресторан">
-        <img src="img/aboutus-dots.svg" alt="точки" class="aboutus__dots">
-        <!-- <div class="aboutus__dots"></div> -->
-      </div>
-      <div class="aboutus__content">
-        <h3 class="section-title_small">STEAK ME — библиотека, где созданы все условия, для Вашего комфортного и непринужденного отдыха</h3>
-        <div class="aboutus__text text">
-          <p>РОДИЗИО - наиболее популярная традиция обслуживания бразильской кухни, также известная как «ешь, сколько хочешь» и эту уникальную концепцию мы предлагаем в Grill do Brasil.</p>
-          <p>Все началось в регионе Пампас, на юге Бразилии, и распространилось по всей стране. «Гаучо-способ» приготовления мяса в сочетании с особым видом обслуживания завоевал уже Европу и Америку.</p>
-        </div>
-        <a href="#" class="btn btn_filled">Читать продолжение</a>
-      </div>
-      <div class="aboutus__photo">
-        <img src="img/aboutus-photo.png" alt="фото">
-      </div>
-    </section>
-
-    <section class="insta">
-      <h2 class="section-title">Наш инстаграм: <a href="https://www.instagram.com/steakme.chita" class="link">@steakme.chita</a></h2>
-      <div class="items-container">
-
-        <div class="insta-item">
-          <div class="insta-item__photo">
-            <img src="img/insta-items/1.png" alt="фото">
-          </div>
-          <div class="insta-item__title">
-            <a href="#" class="insta-item__link">@breehopp</a>
-            <div class="insta-item__likes">
-              <img src="img/icons/font-icon/like.svg" alt="лайк">
-              <span>21</span>
-            </div>
-          </div>
-          <div class="insta-item__text">
-            Another steak appreciation post.<br>
-            Because, steak. 
-          </div>
-        </div>
-
-        <div class="insta-item">
-          <div class="insta-item__photo">
-            <img src="img/insta-items/2.png" alt="фото">
-          </div>
-          <div class="insta-item__title">
-            <a href="#" class="insta-item__link">@breehopp</a>
-            <div class="insta-item__likes">
-              <img src="img/icons/font-icon/like.svg" alt="лайк">
-              <span>21</span>
-            </div>
-          </div>
-          <div class="insta-item__text">
-            Another steak appreciation post.<br>
-            Because, steak. 
-          </div>
-        </div>
-
-        <div class="insta-item">
-          <div class="insta-item__photo">
-            <img src="img/insta-items/3.png" alt="фото">
-          </div>
-          <div class="insta-item__title">
-            <a href="#" class="insta-item__link">@breehopp</a>
-            <div class="insta-item__likes">
-              <img src="img/icons/font-icon/like.svg" alt="лайк">
-              <span>21</span>
-            </div>
-          </div>
-          <div class="insta-item__text">
-            Another steak appreciation post.<br>
-            Because, steak. 
-          </div>
-        </div>
-
-        <div class="insta-item">
-          <div class="insta-item__photo">
-            <img src="img/insta-items/4.png" alt="фото">
-          </div>
-          <div class="insta-item__title">
-            <a href="#" class="insta-item__link">@breehopp</a>
-            <div class="insta-item__likes">
-              <img src="img/icons/font-icon/like.svg" alt="лайк">
-              <span>21</span>
-            </div>
-          </div>
-          <div class="insta-item__text">
-            Another steak appreciation post.<br>
-            Because, steak. 
-          </div>
-        </div>
-   
-      </div>
-    </section>
-
-    <section class="contacts">
-      <div class="contacts-block">
-        <div class="contacts-item">
-          <div class="contacts-item__name">Телефон:</div>
-          <div class="contacts-item__value">
-            <img src="img/icons/font-icon/phone.svg" alt="" class="contacts-item__icon">
-            +7 (302) 255-65-56
-          </div>
-        </div>
-        <div class="contacts-item">
-          <div class="contacts-item__name">Адрес:</div>
-          <div class="contacts-item__value">
-            <img src="img/icons/font-icon/location.svg" alt="" class="contacts-item__icon">
-            г. Чита, ул. Ленина, 81
-          </div>
-        </div>
-        <div class="contacts-item">
-          <div class="contacts-item__name">Режим работы:</div>
-          <div class="contacts-item__value">
-            <img src="img/icons/font-icon/clock.svg" alt="" class="contacts-item__icon">
-            12.00 - 23.00 (Пн.-Вс.)
-          </div>
-        </div>
-        <div class="contacts-item">
-          <div class="contacts-item__name">Мы в соц. сетях:</div>
-          <div class="contacts-item__value socials">
-            <a href="#" class="social"><img src="img/icons/font-icon/fb.svg" alt="fb"></a>
-            <a href="#" class="social"><img src="img/icons/font-icon/vk.svg" alt="vk"></a>
-            <a href="#" class="social"><img src="img/icons/font-icon/insta.svg" alt="insta"></a>
-            <a href="#" class="social"><img src="img/icons/font-icon/youtube.svg" alt="yb"></a>
-            <a href="#" class="social"><img src="img/icons/font-icon/ok.svg" alt="ok"></a>
-          </div>
-        </div>
-      </div>
-      <div id="map">
-
-      </div>
-    </section>
-
-  </main>
   <footer class="footer">
     <div class="footer__left">
       <div class="logo">
@@ -690,7 +696,11 @@
         </a>
       </div>
       <div class="footer__text">
-        <div class="footer__rights">© 2020 Все права защищены.</div>
+        <div class="footer__rights">
+          <script>
+            document.write('&copy; '+ new Date().getFullYear()+' Все права защищены.')
+          </script>
+        </div>
         <div class="footer__dev">
           <span>Разработка сайта — </span>
           <img src="img/forest-footer-logo.svg" alt="forestweb">
@@ -733,7 +743,7 @@
 
     <!-- ДЛЯ ПУСТОЙ КОРЗИНЫ -->
     <!-- <img src="img/empty-cart.png" alt="пустая корзина"> -->
-    <!-- КОНЕЦ ПУСТЙ КОРЗИНЫ -->
+    <!-- КОНЕЦ ПУСТОЙ КОРЗИНЫ -->
 
     <!-- ДЛЯ КОРИЗИНЫ С ТОВАРАМИ -->
     <div class="cart__products-block">
@@ -856,6 +866,7 @@
     </p>
     <a href="" class="btn btn_filled cart__btn ">Оформить заказ</a>
     <!-- КОНЕЦ КОРЗИНЫ С ТОВАРАМИ -->
+    
   </footer>
 
   <script>
@@ -871,8 +882,10 @@
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 <script src="js/map.js"></script>
 <script src="js/jquery.nicescroll.min.js"></script>
-<script src="./js/slick.min.js"></script>
+<script src="js/jquery.mcustomscrollbar.concat.min.js"></script>
+<script src="js/jquery.nice-select.min.js"></script>
+<script src="js/slick.min.js"></script>
 <script src="js/jquery.sticky.js"></script>
-<script src="./js/script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

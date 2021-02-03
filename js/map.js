@@ -4,7 +4,8 @@ $(document).ready(function(){
 
   function init() {
 
-    const centerMap = [52.033094156732325,113.50529006745901];
+    // const centerMap = [52.033094156732325,113.50529006745901];
+    const centerMap = [52.03244565829469,113.5053973558196];
 
     var myMap = new ymaps.Map("map", {
         center: centerMap,

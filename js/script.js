@@ -1,4 +1,12 @@
 $(document).ready(function () {
+
+  // try{
+  //       $('body').mCustomScrollbar({
+  //         axis:"y",
+  //         theme:"dark"
+  //       });
+  //     }catch(e){}
+
   function HeaderMargin() {
     var HeaderBlock = $('.header')
     var HeaderBlockHeight = $('.header').outerHeight()
@@ -21,8 +29,9 @@ $(document).ready(function () {
     $(".sticky").sticky({topSpacing:0});
   });
 
-  $(".sticky-wrapper").sticky({topSpacing:70});
+  // $(".sticky-wrapper").sticky({topSpacing:120});
 
+  // FANCBOX
   try{
     $('[data-fancybox]').fancybox({});
   } catch(e){}
@@ -61,20 +70,7 @@ $(document).ready(function () {
     });
   }
 
-  //прилепили футер к низу
-  if ($(document).height() <= $(window).height()) {
-    $("footer.footer").addClass("footer-fixed-bottom");
-  }
-
-  // $('[data-fancybox]').fancybox();
-
-  // ОТКРЫТИЕ МЕНЮ
-  // $('.main-navigation-btn').on('click', function(){
-  //   $('.aside').addClass('opened');
-  //   $('body').addClass('overflow-hid').addClass('dark');
-  //   $('body::after');
-  // })
-
+  // ОТКРЫТИЕ И ЗАКРЫТИЕ МЕНЮ, КАТАЛОГА, КОРЗИНЫ
   const mobileCatalog = $('.aside');
   const mobileMenu = $('.main-navigation');
   const cartBtn = $('.header .header-cart');
@@ -92,6 +88,7 @@ $(document).ready(function () {
     }
   }
 
+  // КАТАЛОГ
   $(mobileCatalogBtn).click(function () {
     $(mobileCatalog).toggleClass('opened');
     $(document.body).toggleClass('dark').toggleClass('overflow-hid');
@@ -101,6 +98,7 @@ $(document).ready(function () {
     }
   });
 
+  // НАВИГАЦИЯ
   $(mobileMenuBtn).click(function () {
     $(mobileMenu).toggleClass('opened');
     $(document.body).toggleClass('dark').toggleClass('overflow-hid');
@@ -110,9 +108,9 @@ $(document).ready(function () {
     }
   });
 
+  // КОРЗИНА
   $(cartBtn).click(function (e) {
     e.preventDefault();
-    console.log('open');
     $(cartAside).toggleClass('opened');
     $(document.body).toggleClass('dark').addClass('overflow-hid');
 
@@ -121,32 +119,97 @@ $(document).ready(function () {
     }
   });
 
+  // КАТАЛОГ ЗАКРЫТИЕ
   $('.aside .close-btn').click(function(){
     $('.aside').removeClass('opened');
     $(document.body).removeClass('dark').removeClass('overflow-hid');
   });
 
+  // НАВИГАЦИЯ ЗАКРЫТИЕ
   $('.main-navigation .close-btn').click(function(){
     $('.main-navigation').removeClass('opened');
     $(document.body).removeClass('dark').removeClass('overflow-hid');
   });
 
+  // КОРЗИНА ЗАКРЫТИЕ
   $('.cart .cart-header__close-btn').click(function(){
-      console.log('close');
     $('.cart').removeClass('opened');
     $(document.body).removeClass('dark').removeClass('overflow-hid');
   });
 
-  // СКРОЛЛ ТОВАРОВ В КОРЗИНЕ
+  //СКРОЛЛ СТРАНИЦЫ И ТОВАРОВ В КОРЗИНЕ
   try{
+    // $("body").niceScroll({
+    //   cursorcolor:"#4D4238",
+    //   cursorwidth:"8px",
+    //   background:"#292929;",
+    //   cursorborder:"none"
+    // });
+
     $(".cart").niceScroll({
       cursorcolor:"#4D4238",
-      cursorwidth:"10px",
+      cursorwidth:"8px",
       background:"#292929;",
       cursorborder:"none"
     });
   }catch(e){}
 
-  
+  // СТРАНИЦА ОФРМЛЕНИЯ ЗАКАЗА--------------------------------------------------------------------
+
+  // СВЯЗЬ РАДИО-КНОПОК ДОСТАВКИ И ОПЛАТЫ
+  function setPayment(){
+    const deliveryType = $('input[name="shk_delivery"]:checked').attr('id');
+    if (deliveryType=='delivery'){
+        $('label[for="pay-1"]').css('display', 'block').closest('.field-group').addClass('curr-pay');
+        $('label[for="pay-2"]').css('display', 'block').closest('.field-group').addClass('curr-pay');
+        $('label[for="pay-4"]').css('display', 'none').closest('.field-group').removeClass('curr-pay');
+        
+    }
+    else if (deliveryType=='by-myself'){
+        $('label[for="pay-1"]').css('display', 'none').closest('.field-group').removeClass('curr-pay');
+        $('label[for="pay-2"]').css('display', 'none').closest('.field-group').removeClass('curr-pay');
+        $('label[for="pay-4"]').css('display', 'block').closest('.field-group').addClass('curr-pay');
+    }
+    $('input[name="payment"]').prop('checked', false);
+  }
+
+  // setPayment();
+
+  // РАДИОКНОПКИ ДОСТАВКА/САМОВЫВОЗ
+  $('#shopOrderForm input[name="shk_delivery"]').on('click change', function(){
+    // console.dir(this);
+    const delivType = $(this).attr('id');
+    if (delivType=='delivery'){
+      $('.delivery-tab').addClass('checked');
+      $('.bymslf-tab').removeClass('checked');
+    }
+    else if (delivType=='by-myself'){
+      $('.delivery-tab').removeClass('checked');
+      $('.bymslf-tab').addClass('checked');
+    }
+    setPayment();
+  });
+
+  // РАДИОКНОПКИ КАК МОЖНО СКОРЕЕ/К ВЫБРАННОМУ ВРЕМЕНИ
+  $('#shopOrderForm input[name="time"]').on('click change', function(){
+    const timeType = $(this).attr('id');
+    console.log(timeType);
+    if (timeType=='time-1'){
+      $('.choose-time-tab').removeClass('checked');
+    }
+    else if (timeType=='time-2'){
+      $('.choose-time-tab').addClass('checked');
+    }
+  });
+
+  $('select').niceSelect();
+
+  // ДОБАВЛЕНИЕ КЛАССОВ НЕ ПУСТОГО ПОЛЯ ДЛЯ ПСЕВДОПЛЭЙСХОЛДЕРОВ
+  $('input[type=text], textarea').on('change', function(){
+    if ($(this).val()!='')
+      $(this).addClass('not-empty')
+    else
+      $(this).removeClass('not-empty');
+  })
 
 });
